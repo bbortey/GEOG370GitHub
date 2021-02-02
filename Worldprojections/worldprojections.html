@@ -6,23 +6,55 @@
     <title>Projections</title>
 </head>
 <body>
-    <h1>In this project I learned how to display images in different projections</h1>
+    <h1>Homework 2</h1>
     
-    <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <h2 style="color:red">Map Projections Description</h2>
+    <p>After I inserted the given shapefile, I enabled Indicatrix mapper. Following this, I modified the CRS and selected the intended projection. For aesthetic purposes, I changed the properties of the two layers to create a consistent color theme. After this, I would create a new print layout and add the newly created projection. I added the name of the projection and the ESPG by using the text features. When the print layout was satisfactory, I exported the file as a PNG. I went through several iterations of this process by going back to the original project and just switching the selected projection. </p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
-    <a href=".//maps/4326.png">
-    <img src=".//maps/4326.png" alt="WGS84" width='500px'>
+    <h3>This projection maintains area close to the Equator, but it distorts area as you gradually move away from the Equator. This is particularly prominent at the North Pole and South Pole. </h3>
+    <a href="./maps/Homework2_WGS84 copy.png">
+    <img src="./maps/Homework2_WGS84 copy.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
-    <a href=".//maps/54043.png">
-    <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
+    <h3>The projection takes on the figure of an ellipse. It features curved graticules that are shorter closer to the poles. Similarly, area is more distorted towards these poles. </h3>
+    <a href="./maps/Homework2_WorldAitoff copy.png">
+    <img src="./maps/Homework2_WorldAitoff copy.png" alt="Aitoff" width='500px'>
     </a>
-    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
-    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
+    <h2>WGS84/Pseudo-Mercator</h2>
+    <h3>This projection has a more vertical presentation. It preserves shape, but at the cost of area (especially at the South Pole). Distortions in area are pronounced as you move away from the Equator. </h3>
+    <a href="./maps/Homework2_3857 copy.png">
+    <img src="./maps/Homework2_3857 copy.png" alt="Pseudo-Mercator" width='500px'>
+    </a>
+    <h2>Sphere Winkel</h2>
+    <h3>The Sphere Winkel offers a somewhat cylindrical shape. Unlike the Aitoff projection, the graticules are straight. Its most striking distortions occur at the poles. </h3>
+    <a href="./maps/Homework2_53018 copy.png">
+    <img src="./maps/Homework2_53018 copy.png" alt="Sphere Winkel" width='500px'>
+    </a>
+    <h2>World Cylindrical Equal Area</h2>
+    <h3>This projection looks stretched out, which accentuates countries that run east-west. The shape is severely distorted (almost elliptical) as you move away from the Equator. There doesn’t appear to be a significant distortion at the Equator. Preserving area might have impacted distance. </h3>
+    <a href="./maps/Homework2_54034 copy.png">
+    <img src="./maps/Homework2_54034 copy.png" alt="World Cylindrical Equal Area" width='500px'>
+    </a>
+    <h2>World Equidistant Conic</h2>
+    <h3>This projection fosters the impression that you’re looking down at the Earth. Shape gets more distorted as you move away from the center of the Earth. The graticules are curved. Lastly, this projection can accurately depict distance. </h3>
+    <a href="./maps/Homework2_54027 copy.png">
+    <img src="./maps/Homework2_54027 copy.png" alt="World Equidistant Conic" width='500px'>
+</a>
+    <h2>North Pole Azimuthal Equidistant</h2>
+    <h3>This orientation of this projection is similar to the previous projection. The centerpiece of this projection is the North Pole. Shape gets progressively more distorted as you move away from that point. The graticules look like concentric circles. </h3>
+    <a href="./maps/Homework2_102016 copy.png">
+    <img src="./maps/Homework2_102016 copy.png" alt="North Pole Azimuthal Equidistant" width='500px'>
+</a>
+<h2>Sphere Miller Cylindrical </h2>
+    <h3>The Sphere Miller Cylindrical looks like the Mercator projection. Both of them contain linear graticules and maintain area. Once again, the poles have a distorted shape.</h3>
+    <a href="./maps/Homework2_53003 copy.png">
+    <img src="./maps/Homework2_53003 copy.png" alt="Sphere Miller Cylindrical" width='500px'>
+<h2>World Sinusoidal</h2>
+    <h3>This projection has linear graticules and makes the poles look somewhat pointed. The Equator isn’t distorted, and shape isn’t as distorted as the World Equidistant Conic.  </h3>
+    <a href="./maps/Homework2_54008 copy.png">
+    <img src="./maps/Homework2_54008 copy.png" alt="World Sinusoidal" width='500px'>
+
     <p></p>
     <h2>Data used for this project</h2>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
