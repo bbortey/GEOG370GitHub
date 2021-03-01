@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaflet Preview</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+
+   <script src = "data/colvard"></script>
+
+   <script src = "data/storr"></script>
+
+   <script src = "data/mainstation"></script>
+
+  <style type="text/css">
+    body {
+       margin: 0;
+       padding: 0;
+    }
+    html, body, #map{
+       width: 100%;
+       height: 100%;
+    }
+  </style>
+
+
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+
+
+      var map = L.map('map').setView([35.312870354553056, -80.7233806035608], 14.0);
+
+      var marker = L.marker([35.312870354553056, -80.7233806035608]).addTo(map);
+
+      //L.geoJSON(colvard).addTo(map)
+
+      var unccIcon = L.icon({
+        iconUrl: 'https://www.pinclipart.com/picdir/middle/59-595753_computers-clipart-computer-training-academic-icon-png-transparent.png',  
+        iconSize: [50,50],
+        popupAnchor: [0,0]
+    });
+
+      var customPopup = "Colvard North Building:<br> The historical image shows that this building wasn’t even present in 1971. Rather, it was just a grassy space with a campus walkway. This highlights how the university has dramatically expanded during its life. In 1971, there were 4,676 students enrolled. Between the time this image was taken and when the building was opened in 1979, the student body population almost doubled. There are now approximately 30,000 students. The university had to establish academic buildings like the Colvard North Building to match the student body’s population growth.  <br/><img src='https://inside.uncc.edu/sites/inside.uncc.edu/files/fields/news_features/detail_image/colvard-building-200px_0.jpg'width='100px'/>";
+
+      L.geoJSON(colvard, { // a
+    pointToLayer: function (feature, latlng) { // b
+    return L.marker(latlng, {icon: unccIcon});}}) // c 
+    .bindPopup(customPopup) // d
+    .addTo(map); //
+
+      //L.geoJSON(storr).addTo(map)
+
+      var uncc2Icon = L.icon({
+        iconUrl: 'https://w7.pngwing.com/pngs/882/319/png-transparent-architecture-interior-design-services-computer-icons-design-angle-building-text.png',  
+        iconSize: [50,50],
+        popupAnchor: [0,0]
+    });
+
+    var customPopup = "Storrs Building:<br> In 1971, the site where the Storrs Building is located was a parking lot. This site now has multiple buildings and a community garden. The parking spaces have now moved to the east of the site. This change also reveals how the expansion of UNCC’s building footprint has also allowed it to grow academic programs. This building houses their architecture school.<br/><img src='https://coaa.uncc.edu/sites/coaa.uncc.edu/files/media/images/Storrs%20Salon.jpg'width='100px'/>";
+
+    L.geoJSON(storr, { // a
+    pointToLayer: function (feature, latlng) { // b
+    return L.marker(latlng, {icon: uncc2Icon});}}) // c 
+    .bindPopup(customPopup) // d
+    .addTo(map); //
+
+    //L.geoJSON(mainstation).addTo(map)
+
+    var uncc3Icon = L.icon({
+        iconUrl: 'https://image.flaticon.com/icons/png/512/2062/2062153.png',  
+        iconSize: [50,50],
+        popupAnchor: [0,0]
+    });
+
+    var customPopup = "UNC Charlotte Main Station:<br> This site used to be a forested area. It’s now a station for the light rail system. This development shows how the university has shifted from being somewhat siloed to integrating with the Charlotte metropolitan area. The changes could also be linked to how UNCC has reimagined its parking plans and implemented this as an alternative to driving and parking somewhere on the campus. Lastly, being on the light rail line could also signal the university’s desire to be more sustainable.<br/><img src='https://lightrail.uncc.edu/sites/lightrail.uncc.edu/files/styles/short_frontpage_image/public/fields/short_image_rotator/field_short_image/Main_train_sign_1200x400.jpg?itok=JEFwHSoB'width='100px'/>";
+
+    L.geoJSON(mainstation, { // a
+    pointToLayer: function (feature, latlng) { // b
+    return L.marker(latlng, {icon: uncc3Icon});}}) // c 
+    .bindPopup(customPopup) // d
+    .addTo(map); //
+
+      var OSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	      maxZoom: 19,
+	      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          }).addTo(map);
+
+      var photo = L.tileLayer('./Tiles%20v2/Tiles%20v3/{z}/{x}/{y}.png', {
+        minZoom: 12,
+        maxZoom: 16,
+        tms: false,
+        attribution: 'USGS'
+      })
+
+      var tiles = {
+        "Open Street Map": OSM,
+        "UNC Charlotte & University City":photo
+      }
+
+      var ms = {
+        "UNC Charlotte Main Station":L.geoJSON(mainstation)
+      }
+
+      var st = {
+        "Storrs Building":L.geoJSON(storr)
+      }
+
+      var co = {
+        "Colvard North Building":L.geoJSON(colvard)
+      }
+
+      var markers = {
+        "UNC Charlotte Main Station":L.geoJSON(mainstation),
+        "Storrs Building":L.geoJSON(storr),
+        "Colvard North Building":L.geoJSON(colvard)
+      }
+
+      L.control.layers(tiles, markers).addTo(map);
+      
+   
+
+
+      
+
+  </script>
+</body>
+</html>
