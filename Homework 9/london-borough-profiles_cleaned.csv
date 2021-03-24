@@ -1,0 +1,40 @@
+Code,Area name,Inner/ Outer London,% of resident population born abroad (2014)
+E09000001,City of London,Inner London,
+E09000002,Barking and Dagenham,Outer London,37.4
+E09000003,Barnet,Outer London,35.9
+E09000004,Bexley,Outer London,16.1
+E09000005,Brent,Outer London,56.2
+E09000006,Bromley,Outer London,17.2
+E09000007,Camden,Inner London,42.4
+E09000008,Croydon,Outer London,29.7
+E09000009,Ealing,Outer London,45.5
+E09000010,Enfield,Outer London,32.8
+E09000011,Greenwich,Outer London,32.9
+E09000012,Hackney,Inner London,38.9
+E09000013,Hammersmith and Fulham,Inner London,41.5
+E09000014,Haringey,Inner London,39.6
+E09000015,Harrow,Outer London,50.7
+E09000016,Havering,Outer London,11.9
+E09000017,Hillingdon,Outer London,33.1
+E09000018,Hounslow,Outer London,47.8
+E09000019,Islington,Inner London,36.8
+E09000020,Kensington and Chelsea,Inner London,54.7
+E09000021,Kingston upon Thames,Outer London,29.2
+E09000022,Lambeth,Inner London,33.6
+E09000023,Lewisham,Inner London,30.9
+E09000024,Merton,Outer London,41.1
+E09000025,Newham,Inner London,51.8
+E09000026,Redbridge,Outer London,40.1
+E09000027,Richmond upon Thames,Outer London,24.2
+E09000028,Southwark,Inner London,35.9
+E09000029,Sutton,Outer London,26.4
+E09000030,Tower Hamlets,Inner London,37.8
+E09000031,Waltham Forest,Outer London,36
+E09000032,Wandsworth,Inner London,32.8
+E09000033,Westminster,Inner London,51.3
+E13000001,Inner London,,39.9
+E13000002,Outer London,,34.5
+E12000007,London,,36.6
+E92000001,England,,14.2
+K02000001,United Kingdom,,13
+Nat,National comparator,,13
