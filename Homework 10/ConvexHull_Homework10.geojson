@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "ConvexHull_Homework10",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2264" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 0, "area": 74460709.695618004, "perimeter": 56839.32998 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 1446785.810914725065231, 478629.750938728451729 ], [ 1467625.810901299118996, 496268.933508053421974 ], [ 1457908.246018886566162, 480897.948830142617226 ], [ 1446785.810914725065231, 478629.750938728451729 ] ] ] } }
+]
+}

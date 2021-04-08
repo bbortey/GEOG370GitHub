@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 10</title>
+</head>
+<body>
+<h1>Homework 10: Vector Spatial Analysis </h1>
+<h2>Beryl Bortey</h2>
+<h3>What areas of Charlotte aren’t within 1 mile of a hospital or health institution? 
+    <p></p>
+    Is the area of interest for the new hospital optimally located to address areas that don’t already have significant health care access? 
+    <p></p> 
+    I was interested in health care access and the distribution of hospitals and health institutions in Charlotte, North Carolina. I created a buffer around the points of hospitals and health institutions. This buffer represents the areas of Charlotte that are within 1 mile of a hospital or health institution. In addition to the buffer, I added a convex hull. There’s interest in building another hospital in South Charlotte. The convex hull boundary encompasses the existing hospitals in that particular area, and that also coincides with where they might construct another hospital. 
+      </h3>
+<!-- Your map goes here -->
+<a href="./Homework10.png">
+    <img src="./Homework10.png" alt="Map of Charlotte that depicts hospitals and health institutions" width='800px'>
+    </a>
+
+<!-- Link to your shapefile in Github and you CSV -->
+<h2>Data used for this project</h2>
+    <a href="http://maps.co.mecklenburg.nc.us/openmapping/data.html"> Hospitals/Health Institutions, Zoning, and Charlotte Data </a>
+    <p></p>
+    <a href="./Buffer_Homework10.geojson"> Buffer GeoJSON </a>
+    <p></p>
+    <a href="./ConvexHull_Homework10.geojson"> Convex Hull GeoJSON </a>
+
+</body>
+</html>
